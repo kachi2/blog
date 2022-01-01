@@ -5,7 +5,6 @@
             this.imgLoaded();
             this.tabHover();
             this.navHover();
-            this.fullSkinSearch();
             this.masonrySlide();
             this.toTop();
             this.instagram();
@@ -93,42 +92,7 @@
 // -------------------------------------------------------------------------- //
 // Full Skin Search
 // -------------------------------------------------------------------------- //
-        fullSkinSearch: function () {
-            var openCtrl1 = document.getElementById('btn-search1'),
-                    openCtrl2 = document.getElementById('btn-search2'),
-                    closeCtrl = document.getElementById('btn-search-close'),
-                    searchContainer = document.querySelector('.search'),
-                    inputSearch = searchContainer.querySelector('.search__input');
-
-            function init() {
-                initEvents();
-            }
-
-            function initEvents() {
-                openCtrl1.addEventListener('click', openSearch);
-                openCtrl2.addEventListener('click', openSearch);
-                closeCtrl.addEventListener('click', closeSearch);
-                document.addEventListener('keyup', function (ev) {
-                    // escape key.
-                    if (ev.keyCode === 27) {
-                        closeSearch();
-                    }
-                });
-            }
-
-            function openSearch() {
-                searchContainer.classList.add('search--open');
-                inputSearch.focus();
-            }
-
-            function closeSearch() {
-                searchContainer.classList.remove('search--open');
-                inputSearch.blur();
-                inputSearch.value = '';
-            }
-
-            init();
-        },
+      
 // -------------------------------------------------------------------------- //
 // Masonry Slide
 // -------------------------------------------------------------------------- //  

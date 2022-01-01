@@ -271,7 +271,7 @@ a,
     border-bottom: 1px solid #eaeaea;
 }
 .top-header.dark {
-    background-color: #000;
+    background-color: #fff;
     border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 .header-nav {
@@ -297,7 +297,7 @@ a,
 }
 .top-header.dark .header-nav ul li,
 .top-header.dark .header-nav ul li a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
 .headre-weather {
     margin-right: 20px;
@@ -320,7 +320,7 @@ a,
 }
 .top-header.dark .top-socia-share li a,
 .top-header.dark .weather-top {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
 .weather-top i {
     background: none;
