@@ -19,4 +19,16 @@ Route::get('/', 'HomeController@index')->name('index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/news/details', 'HomeController@details')->name('blog.details');
+Route::get('/news/details/{id}', 'HomeController@details')->name('post.details');
+
+
+
+#===================ADMIN PAGES ================
+Route::prefix('cyptoconsole')->group(function (){
+Route::get('/', 'AdminController@index')->name('admin.index');
+Route::get('/blog/create', 'AdminController@createBlog')->name('admin.blog.create');
+Route::post('/blog/store', 'AdminController@storeBlog');
+Route::get('/blog/index', 'AdminController@blogIndex')->name('admin.blog.index');
+
+
+});

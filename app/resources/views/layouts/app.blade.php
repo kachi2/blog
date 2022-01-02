@@ -43,21 +43,18 @@
                 <div class="col-sm-6 col-md-5">
                     <ul class="top-socia-share">
                         <li>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#user-modal">Login / Register</a>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#user-modal">Advertise with us</a>
                         </li>
                         <li>
                             <div class="weather-top">
-                                <i class="fa fa-cloud"></i>
+                                <i class="fa fa-clock-o"></i>
                                 <div class="weather-now">
-                                    <span class="degrees">- 5.9</span>
-                                    <span class="unit">C</span>
+                                    <span class="degrees">{{Date('h:i a')}}</span>
                                 </div>
-                                <div class="weather-city">New York</div>
                             </div>
                         </li>
                     </ul>

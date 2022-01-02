@@ -24,12 +24,11 @@
                 <div class="details-body">
                     <div class="post_details stickydetails">
                         <header class="details-header">
-                            <div class="post-cat"><a href="#">Fashion</a><a href="#">Travel</a><a href="#">Lifestyle</a></div>
-                            <h2>There are many <em>variations of passages</em> of Lorem Ipsum available, but the majority.</h2>
+                            <div class="post-cat"><a href="#">{{$post->category->name}}</a></div>
+                            <h2>{{$post->title}}.</h2>
                             <div class="element-block">
                                 <div class="entry-meta">
-                                    <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span> 
-                                    <span class="comment-link"><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>9 Comments</a></span>
+                                    <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">{{$post->created_at->format('d M Y')}}</time></span> 
                                 </div>
                                 <div class="reading-time"><span class="eta"></span> (<span class="words"></span> words)</div>
                             </div>
@@ -39,118 +38,19 @@
                                 <div class="item">
                                     <div class="gallery_grid">
                                         <figure class="effect-lily">
-                                            <a href="assets/img/gallery/700x365-1.jpg" class="gallery_img" title="Title goes here">
+                                            <a href="{{asset('images/'.$post->image)}}" class="gallery_img" title="{{$post->title}}">
                                                 <div class="full_skin"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
-                                                <img src="assets/img/gallery/700x365-1.jpg" class="img-responsive" alt="">
+                                                <img src="{{asset('images/'.$post->image)}}" class="img-responsive" alt="">
                                             </a>			
                                         </figure>
                                     </div>
                                     <!-- /.End of gallery grid -->
-                                </div>
-                                <!-- /.End of gallery item -->
-                                <div class="item">
-                                    <div class="gallery_grid">
-                                        <figure class="effect-lily">
-                                            <a  href="assets/img/gallery/700x365-2.jpg" class="gallery_img" title="Title goes here">
-                                                <div class="full_skin"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
-                                                <img src="assets/img/gallery/700x365-2.jpg" class="img-responsive" alt="">
-                                            </a>			
-                                        </figure>
-                                    </div>
-                                    <!-- /.End of gallery grid -->
-                                </div>
-                                <!-- /.End of gallery item -->
-                                <div class="item">
-                                    <div class="gallery_grid">
-                                        <figure class="effect-lily">
-                                            <a href="assets/img/gallery/700x365-3.jpg" class="gallery_img" title="Title goes here">
-                                                <div class="full_skin"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
-                                                <img src="assets/img/gallery/700x365-3.jpg" class="img-responsive" alt="">
-                                            </a>			
-                                        </figure>
-                                    </div>
-                                    <!-- /.End of gallery grid -->
-                                </div>
-                                <!-- /.End of gallery item -->
-                                <div class="item">
-                                    <div class="gallery_grid">
-                                        <figure class="effect-lily">
-                                            <a href="assets/img/gallery/700x365-4.jpg" class="gallery_img" title="Title goes here">
-                                                <div class="full_skin"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
-                                                <img src="assets/img/gallery/700x365-4.jpg" class="img-responsive" alt="">
-                                            </a>	
-                                        </figure>
-                                    </div>
-                                    <!-- /.End of gallery grid -->
-                                </div>
-                                <!-- /.End of gallery item -->
-                                <div class="item">
-                                    <div class="gallery_grid">
-                                        <figure class="effect-lily">
-                                            <a href="assets/img/gallery/700x365-5.jpg" class="gallery_img" title="Title goes here">
-                                                <div class="full_skin"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
-                                                <img src="assets/img/gallery/700x365-5.jpg" class="img-responsive" alt="">
-                                            </a>		
-                                        </figure>
-                                    </div>
-                                    <!-- /.End of gallery grid -->
-                                </div>
-                                <!-- /.End of gallery item -->
-                                <div class="item">
-                                    <div class="gallery_grid">
-                                        <figure class="effect-lily">
-                                            <a href="assets/img/gallery/700x365-6.jpg" class="gallery_img" title="Title goes here">
-                                                <div class="full_skin"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
-                                                <img src="assets/img/gallery/700x365-6.jpg" class="img-responsive" alt="">
-                                            </a>	
-                                        </figure>
-                                    </div>
-                                    <!-- /.End of gallery grid -->
-                                </div>
-                                <!-- /.End of gallery item -->
-                            </div>
-                            <div id="sync2" class="owl-carousel">
-                                <div class="item">
-                                    <img src="assets/img/gallery/400x280-1.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/img/gallery/400x280-2.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/img/gallery/400x280-3.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/img/gallery/400x280-4.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/img/gallery/400x280-5.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/img/gallery/400x280-6.jpg" class="img-responsive" alt="">
                                 </div>
                             </div>
+                           
                         </div>
-                        <!-- /.End of gallery -->
-                        <h3>It is a long established fact that a reader will be distracted. </h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
-                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected
-                            humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need 
-                            to be sure there isn't anything embarrassing hidden in the middle.</p>
-                        <blockquote>
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
-                            by injected humour, or randomised words which don't look even slightly believable.
-                        </blockquote>
-                        <h3>There are many variations of passages of Lorem Ipsum available.</h3>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
-                            making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
-                            obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 
-                            the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil)
-                            by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-                            "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                      
+                        <p>{{$post->content}}</p>
                     </div>
                     <!-- /.End of post details -->
                     <div class="stickyshare">
@@ -167,44 +67,27 @@
                 <!-- /.End of details body -->
                
                 <!-- /.End of about author -->
+                @if(count($similar) > 0)
+
                 <div class="post_related">
                     <h3 class="related_post_title">You Might Also Like...</h3>
                     <div class="row">
+                    @foreach ($similar as $sm )
                         <div class="col-sm-4">
                             <article class="post_article item_related">
                                 <a class="post_img" href="#">
                                     <figure>
-                                        <img class="img-responsive" src="assets/img/400x280-7.jpg" alt="">
+                                        <img class="img-responsive" src="{{asset('images/'.$sm->image)}}" alt="">
                                     </figure>
                                 </a>
-                                <h4><a href="#">Ut et nunc a <em><strong>dolor sodales</strong></em> lacinia quis ac justo.</a></h4>
+                                <h4><a href="#">{{$sm->title}}</a></h4>
                             </article>
                             <!-- /.End of related post -->
                         </div>
-                        <div class="col-sm-4">
-                            <article class="post_article item_related">
-                                <a class="post_img" href="#">
-                                    <figure>
-                                        <img class="img-responsive" src="assets/img/400x280-8.jpg" alt="">
-                                    </figure>
-                                </a>
-                                <h4><a href="#">Aliquam <em><strong>gravida urna</strong></em> ut ipsum hendrerit cursus.</a></h4>
-                            </article>
-                            <!-- /.End of related post -->
-                        </div>
-                        <div class="col-sm-4">
-                            <article class="post_article item_related">
-                                <a class="post_img" href="#">
-                                    <figure>
-                                        <img class="img-responsive" src="assets/img/400x280-9.jpg" alt="">
-                                    </figure>
-                                </a>
-                                <h4><a href="#">Aliquam eu nunc at nulla efficitur <em><strong>pellentesque a quis.</strong></em></a></h4>
-                            </article>
-                            <!-- /.End of related post -->
-                        </div>
+                        @endforeach
                     </div>
                 </div>
+                @endif
                 <!-- /.End of  related post -->
                 ]
                 <!-- /.End of comment content -->
@@ -216,42 +99,19 @@
                         <span class="title-shape title-shape-dark"></span>
                     </div>
                     <!--  /.End of title -->
-                    <div class="media latest_post">
+                    @foreach ($latest as $recent )
+                     <div class="media latest_post">
                         <a class="media-left" href="#">
-                            <img src="assets/img/100x70-1.jpg" class="media-object" alt="">
+                            <img src="{{asset('images/'.$recent->image)}}" class="media-object" alt="">
                         </a>
                         <div class="media-body">
-                            <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics Copenhagen</a></h6>
+                            <h6 class="media-heading"><a href="#">{{$recent->title}}</a></h6>
                             <div class="entry-meta">
-                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span>
+                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">{{$recent->created_at->format('d M Y')}}</time></span>
                             </div>
                         </div>
                     </div>
-                    <!-- /.latest post -->
-                    <div class="media latest_post">
-                        <a class="media-left" href="#">
-                            <img src="assets/img/100x70-2.jpg" class="media-object" alt="">
-                        </a>
-                        <div class="media-body">
-                            <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics Copenhagen</a></h6>
-                            <div class="entry-meta">
-                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.latest post -->
-                    <div class="media latest_post">
-                        <a class="media-left" href="#">
-                            <img src="assets/img/100x70-3.jpg" class="media-object" alt="">
-                        </a>
-                        <div class="media-body">
-                            <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics Copenhagen</a></h6>
-                            <div class="entry-meta">
-                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.latest post -->
+                      @endforeach
                 </div>
                 <!-- /.End of latest post -->
                 <!-- /.End of tags -->
