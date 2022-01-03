@@ -20,6 +20,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/news/details/{id}', 'HomeController@details')->name('post.details');
+Route::get('/crypto/businesses', 'HomeController@business')->name('crypto.business');
 
 
 

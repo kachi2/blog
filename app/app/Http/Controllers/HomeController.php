@@ -24,7 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::latest()->take(10)->get();
-        return view('home', compact('posts', $posts));
+        return view('blog.home', compact('posts', $posts));
     }
 
     public function details($id){
@@ -32,6 +32,12 @@ class HomeController extends Controller
         $data['post'] = Post::where('id', decrypt($id))->first();
         $data['latest'] = Post::latest()->take(5)->get();
         $data['similar'] = Post::where('category_id', $post->category->id)->take(5)->get();
-        return view('details', $data);
+        return view('blog.details', $data);
+    }
+
+
+    public function business(){
+        $data['latest'] = Post::latest()->take(5)->get();
+        return view('blog.business', $data);
     }
 }

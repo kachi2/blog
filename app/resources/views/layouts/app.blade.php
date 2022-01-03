@@ -81,7 +81,7 @@
                         <a href="{{route('index')}}" >Home</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Crypto Business</a>
+                        <a href="{{route('crypto.business')}}">Crypto Business</a>
                     </li>
                     <!-- /.End of category menu -->
                     <li><a href="javascript:void(0)">Crypto Brokers</a></li>
@@ -164,7 +164,7 @@
                       @foreach ($popular as $pp)
                       <div class="media latest_post">
                           <a class="media-left" href="#">
-                              <img src="{{asset('images/',$pp->image)}}" class="media-object" alt="">
+                              <img src="{{asset('images/'.$pp->image)}}" class="media-object" alt="">
                           </a>
                           <div class="media-body">
                               <h6 class="media-heading"><a href="#">{{$pp->title}}</a></h6>
