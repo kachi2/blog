@@ -34,9 +34,9 @@
                 <div class="col-sm-6 col-md-7">
                     <div class="header-nav">
                         <ul>
-                            <li><span class="headre-weather"><i class="fa fa-calendar-check-o"></i>&nbsp; Thursday, January 25</span></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="about-me.html">about</a></li>
+                            <li><span class="headre-weather"><i class="fa fa-calendar-check-o"></i>&nbsp; {{Date('D, M, d')}}</span></li>
+                            <li><a href="{{route('index')}}">Contact</a></li>
+                            <li><a href="{{route('index')}}">about</a></li>
                         </ul>
                     </div>
                 </div>
@@ -71,14 +71,14 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index-2.html"><img src="assets/img/logo-white.png" class="logo" alt=""></a>
+                <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/lks.png')}}" class="logo" alt=""></a>
             </div>
             <!-- End Header Navigation -->
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="navFadeInDown" data-out="navFadeOutUp">
                     <li class="dropdown active">
-                        <a href="index-2.html" >Home</a>
+                        <a href="{{route('index')}}" >Home</a>
                     </li>
                     <li class="dropdown">
                         <a href="#">Crypto Business</a>
@@ -129,14 +129,12 @@
   <div class="main-footer">
       <div class="container">
           <div class="row">
-              <div class="col-sm-4 col-md-4">
+              <div class="col-sm-6 col-md-6">
+                  <h3 class="widget-title title-white">About Us</h3>
                   <div class="footer-box">
-                      <div class="footer-logo">
-                          <img src="assets/img/logo-white.png" class="img-responsive" alt="">
-                      </div>
-                      <p>It is a long established fact that a reader<br>
-                          will be distracted by the readable content of<br>
-                          a page when looking at its layout. The point<br>
+                      <p>It is a long established fact that a reader
+                          will be distracted by the readable content of
+                          a page when looking at its layout. The point
                           of using Lorem Ipsum</p>
                       <div class="textwidget"><p>457 BIgBlue Street, Suite 4A<br>
                               New York, NY 10013<br>
@@ -147,75 +145,35 @@
                       <p>Contact us on <a href="mailto:info@example.com"><strong>info@example.com</strong></a></p> 
                   </div>
               </div>
-              <div class="hidden-sm col-md-3">
-                  <div class="footer-box">
-                      <h3 class="widget-title title-white">Twitter</h3>
-                      <ul class="twitter-widget">
-                          <li>
-                              <div class="icon"><i class="ti-twitter"></i></div>
-                              <div class="tweet-text">
-                                  So proud to have become an <a target="_blank" href="#">@envato</a> Power Elite author. Drop our #ThemeForest: <a target="_blank" href="#">https://t.co/jGyLLggygN</a>
-                              </div>
-                          </li>
-                          <li>
-                              <div class="icon"><i class="ti-twitter"></i></div>
-                              <div class="tweet-text">
-                                  So proud to have become an <a target="_blank" href="#">@envato</a> Power Elite author. Drop out our #ThemeForest: <a target="_blank" href="#">https://t.co/jGyLLggygN</a>
-                              </div>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
               <div class="col-sm-3 col-md-2">
                   <div class="footer-box">
-                      <h3 class="widget-title title-white">Need help</h3>
+                      <h3 class="widget-title title-white">Links</h3>
                       <ul class="footer-cat">
-                          <li><a href="#">Our Community</a></li>
-                          <li><a href="#">See Our Portfolio</a></li>
-                          <li><a href="#">Story About Us</a></li>
-                          <li><a href="#">Keep in Touch</a></li>
-                          <li><a href="#">Purchase Our Products</a></li>
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Terms & Privacy</a></li>
+                          <li><a href="#">Contact Us</a></li>
+                          <li><a href="#">Crypto Explainer</a></li>
+                          <li><a href="#">Advertise with Us</a></li>
                       </ul>
                   </div>
               </div>
               <div class="col-sm-5 col-md-3">
                   <div class="footer-box">
-                      <h3 class="widget-title title-white">Latest Post</h3>
+                      <h3 class="widget-title title-white">Popular Post</h3>
+                      
+                      @foreach ($popular as $pp)
                       <div class="media latest_post">
                           <a class="media-left" href="#">
-                              <img src="assets/img/100x70-1.jpg" class="media-object" alt="">
+                              <img src="{{asset('images/',$pp->image)}}" class="media-object" alt="">
                           </a>
                           <div class="media-body">
-                              <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics Copenhagen</a></h6>
+                              <h6 class="media-heading"><a href="#">{{$pp->title}}</a></h6>
                               <div class="entry-meta">
-                                  <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span>
+                                  <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="">{{$pp->created_at->format('d, M Y')}}</time></span>
                               </div>
                           </div>
                       </div>
-                      <!-- /.latest post -->
-                      <div class="media latest_post">
-                          <a class="media-left" href="#">
-                              <img src="assets/img/100x70-2.jpg" class="media-object" alt="">
-                          </a>
-                          <div class="media-body">
-                              <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics Copenhagen</a></h6>
-                              <div class="entry-meta">
-                                  <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- /.latest post -->
-                      <div class="media latest_post">
-                          <a class="media-left" href="#">
-                              <img src="assets/img/100x70-3.jpg" class="media-object" alt="">
-                          </a>
-                          <div class="media-body">
-                              <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics Copenhagen</a></h6>
-                              <div class="entry-meta">
-                                  <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span>
-                              </div>
-                          </div>
-                      </div>
+                       @endforeach
                       <!-- /.latest post -->
                   </div>
               </div>
@@ -223,7 +181,7 @@
       </div>
   </div>
   <div class="sub-footer">
-      Copyright © 2017 by Bdtask. All Rights Reserved.
+      Copyright © {{Date('Y')}}. All Rights Reserved.
   </div>
 </footer>
 <!-- /.End of footer -->
