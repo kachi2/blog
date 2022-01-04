@@ -84,7 +84,7 @@
                         <a href="{{route('crypto.business')}}">Crypto Business</a>
                     </li>
                     <!-- /.End of category menu -->
-                    <li><a href="javascript:void(0)">Crypto Brokers</a></li>
+                    <li><a href="{{route('crypto.brokers')}}">Crypto Brokers</a></li>
                     <li><a href="contact.html">Invest in Crypto</a></li>
 
                     <li><a href="contact.html">Crypto Exchange</a></li>

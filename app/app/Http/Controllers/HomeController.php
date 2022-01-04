@@ -35,9 +35,13 @@ class HomeController extends Controller
         return view('blog.details', $data);
     }
 
-
     public function business(){
         $data['latest'] = Post::latest()->take(5)->get();
         return view('blog.business', $data);
+    }
+
+    public function brokers(){
+        $data['latest'] = Post::latest()->take(5)->get();
+        return view('blog.brokers', $data);
     }
 }
