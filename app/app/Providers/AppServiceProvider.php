@@ -31,5 +31,8 @@ class AppServiceProvider extends ServiceProvider
     {
         $popular = Post::where('views', '>', 0)->take(3)->get();
         View::share('popular',$popular);
+
+        $heading = Post::inRandomOrder()->get();
+        View::share('heading', $heading);
     }
 }

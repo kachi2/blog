@@ -96,17 +96,13 @@
     <div class="clearfix"></div>
     <div class="container">
       <div class="newstricker_inner">
-          <div class="trending"><strong>Trending</strong> Now</div>
+          <div class="trending"><strong>Popular</strong> Post</div>
           <div id="newsTicker" class="owl-carousel owl-theme">
-              <div class="item">
-                  <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+          @foreach ($heading as $pp )
+          <div class="item">
+                  <a href="#">{{$pp->title}}</a>
               </div>
-              <div class="item">
-                  <a href="#">It is a long established fact that a reader will be distracted by the readable.</a>
-              </div>
-              <div class="item">
-                  <a href="#">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
-              </div>
+               @endforeach
           </div>
       </div>
   </div>
@@ -122,15 +118,7 @@
               <div class="col-sm-5 col-md-5">
                   <h3 class="widget-title title-white">About Us</h3>
                   <div class="footer-box">
-                      <p>It is a long established fact that a reader
-                          will be distracted by the readable content of
-                          a page when looking at its layout. The point
-                          of using Lorem Ipsum</p>
-                      <div class="textwidget"><p>457 BIgBlue Street, Suite 4A<br>
-                              New York, NY 10013<br>
-                              <span>(315) 5512-2579</span><br>
-                          </p>
-                      </div>
+                      <p>CryptoNews cryptocurrency news service that covers bitcoin news today and other coins, technical analysis & forecasts for bitcoin price and other altcoins. Here at CrytoNews, we are dedicated to enlightening everyone about bitcoin and other cryptocurrencies.</p>
                       <p>Contact us on <a href="mailto:info@cryptonews.blog"><strong>info@cryptonews.blog</strong></a></p> 
                   </div>
               </div>
@@ -138,11 +126,10 @@
                   <div class="footer-box">
                       <h3 class="widget-title title-white">Links</h3>
                       <ul class="footer-cat">
-                          <li><a href="#">Crypto News</a></li>
-                          <li><a href="#">Crypto Business</a></li>
-                          <li><a href="#">Crypto Brokers</a></li>
-                          <li><a href="#">Invest In Crypto</a></li>
-                          <li><a href="#">Cryto Exchange</a></li>
+                      <a href="{{route('crypto.business')}}">Crypto Business</a></li>
+                    <li><a href="{{route('crypto.brokers')}}">Crypto Brokers</a></li>
+                    <li><a href="{{route('crypto.invest')}}">Invest in Crypto</a></li>
+                    <li><a href="{{route('crypto.exchange')}}">Crypto Exchange</a></li>
                       </ul>
                   </div>
               </div>
