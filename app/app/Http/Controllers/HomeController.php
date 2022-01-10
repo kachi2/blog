@@ -42,6 +42,24 @@ class HomeController extends Controller
 
     public function brokers(){
         $data['latest'] = Post::latest()->take(5)->get();
-        return view('blog.brokers', $data);
+        return view('blog.brokers.brokers', $data);
+    }
+
+    public function Invest(){
+        $data['latest'] = Post::latest()->take(5)->get();
+        return view('blog.brokers.invest', $data);
+    }
+
+    public function Exchange(){
+        $cURLConnection = curl_init();
+        curl_setopt($cURLConnection, CURLOPT_URL, 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false');
+        curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array(
+            "Content-Type: application/json",
+        ));
+        curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true); 
+        $se = curl_exec($cURLConnection);
+        curl_close($cURLConnection);  
+        $data['coins'] = json_decode($se, true);
+        return view('blog.charts', $data);
     }
 }

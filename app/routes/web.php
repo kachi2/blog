@@ -22,6 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/news/details/{id}', 'HomeController@details')->name('post.details');
 Route::get('/crypto/businesses', 'HomeController@business')->name('crypto.business');
 Route::get('/crypto/brokers', 'HomeController@brokers')->name('crypto.brokers');
+Route::get('/crypto/invest', 'HomeController@Invest')->name('crypto.invest');
+Route::get('/crypto/exchange', 'HomeController@Exchange')->name('crypto.exchange');
 
 
 

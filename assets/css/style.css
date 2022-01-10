@@ -957,14 +957,15 @@ nav.navbar.bootsnav {
         border: 0;
     }
     /* Navbar General ------*/
-    .navbar-default .container > .navbar-collapse{
+    /* .navbar-default .container > .navbar-collapse{*/
         /*position: relative;*/
-    }
+    /* }  */
+    
     .container > .navbar-collapse {
         padding: 0;
     }
     nav.navbar .navbar-brand img.logo{
-        width: 110px;
+        width: 120px;
     }
     nav.navbar.bootsnav ul.nav > li > a {
         padding: 20px 15px;

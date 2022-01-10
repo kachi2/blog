@@ -65,34 +65,24 @@
     <!-- /.End of top header -->
     <nav class="navbar navbar-inverse navbar-sticky navbar-mobile bootsnav">
         <div class="container">
-            <!-- End Atribute Navigation -->
-            <!-- Start Header Navigation -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/lks.png')}}" class="logo" alt=""></a>
             </div>
-            <!-- End Header Navigation -->
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="navFadeInDown" data-out="navFadeOutUp">
-                    <li class="dropdown active">
-                        <a href="{{route('index')}}" >Home</a>
+                    <li class="dropdown ">
+                        <a href="{{route('index')}}" >Crypto News</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="{{route('crypto.business')}}">Crypto Business</a>
-                    </li>
-                    <!-- /.End of category menu -->
+                    <li class="dropdown"><a href="{{route('crypto.business')}}">Crypto Business</a></li>
                     <li><a href="{{route('crypto.brokers')}}">Crypto Brokers</a></li>
-                    <li><a href="contact.html">Invest in Crypto</a></li>
-
-                    <li><a href="contact.html">Crypto Exchange</a></li>
-
-                    <li><a href="contact.html">Crypto Explainer</a></li>
+                    <li><a href="{{route('crypto.invest')}}">Invest in Crypto</a></li>
+                    <li><a href="{{route('crypto.exchange')}}">Crypto Exchange</a></li>
                     <div class="attr-nav">
                       <ul>
-                          <li id="btn-search1"><a href="javascript:void(0)" id="btn-search2"><i class="fa fa-search"></i></a></li>
+                         <li id="btn-search1"><a href="#" id="btn-search2"><i class="fa fa-search"></i></a></li>
                       </ul>
                   </div>
                 </ul>
@@ -129,7 +119,7 @@
   <div class="main-footer">
       <div class="container">
           <div class="row">
-              <div class="col-sm-6 col-md-6">
+              <div class="col-sm-5 col-md-5">
                   <h3 class="widget-title title-white">About Us</h3>
                   <div class="footer-box">
                       <p>It is a long established fact that a reader
@@ -139,25 +129,24 @@
                       <div class="textwidget"><p>457 BIgBlue Street, Suite 4A<br>
                               New York, NY 10013<br>
                               <span>(315) 5512-2579</span><br>
-                              <!--<a href="mailto:info@example.com">info@example.com</a>-->
                           </p>
                       </div>
-                      <p>Contact us on <a href="mailto:info@example.com"><strong>info@example.com</strong></a></p> 
+                      <p>Contact us on <a href="mailto:info@cryptonews.blog"><strong>info@cryptonews.blog</strong></a></p> 
                   </div>
               </div>
               <div class="col-sm-3 col-md-2">
                   <div class="footer-box">
                       <h3 class="widget-title title-white">Links</h3>
                       <ul class="footer-cat">
-                          <li><a href="#">About Us</a></li>
-                          <li><a href="#">Terms & Privacy</a></li>
-                          <li><a href="#">Contact Us</a></li>
-                          <li><a href="#">Crypto Explainer</a></li>
-                          <li><a href="#">Advertise with Us</a></li>
+                          <li><a href="#">Crypto News</a></li>
+                          <li><a href="#">Crypto Business</a></li>
+                          <li><a href="#">Crypto Brokers</a></li>
+                          <li><a href="#">Invest In Crypto</a></li>
+                          <li><a href="#">Cryto Exchange</a></li>
                       </ul>
                   </div>
               </div>
-              <div class="col-sm-5 col-md-3">
+              <div class="col-sm-5 col-md-4">
                   <div class="footer-box">
                       <h3 class="widget-title title-white">Popular Post</h3>
                       
@@ -230,5 +219,7 @@
                 }
             });
         </script>
+
+        @yield('script')
 </body>
 </html>
