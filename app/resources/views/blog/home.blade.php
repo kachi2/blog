@@ -8,18 +8,18 @@
         <div class="row">
             <div class="col-sm-8">
                 <div id="blog-slide" class="owl-carousel owl-theme">
-                @foreach ($slider as $center )
+                @foreach ($center as $cc)
                     <div class="item">
                         <div class="blog-item blog-item-lg">
-                            <a href=""><figure><img src="assets/img/masonry/750x480-1.jpg" class="img-responsive" alt=""></figure></a>
+                            <a href=""><figure><img src="{{asset('images/'.$cc->image)}}" class="img-responsive" alt=""></figure></a>
                             <div class="blog-text">
                                 <div class="content-border">
-                                    <div class="post-cat"><a href="#">Inspiration & Design</a></div>
+                                    <div class="post-cat"><a href="#">{{$cc->category->name}}</a></div>
                                     <div class="entry-meta">
-                                        <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time> </span> 
-                                        <span class="comment-link"><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>9 Comments</a></span>
+                                        <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">{{$cc->created_at->format('M d, Y')}}</time> </span> 
+                                        <span class="comment-link"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>9 views</a></span>
                                     </div>
-                                    <h2 class="blog-title"><a href="#">It is a long <em>established</em> fact that a reader will be distracted by the readable content of a page</a></h2>
+                                    <h2 class="blog-title"><a href="#">{{$cc->title}} </a></h2>
                                     <a href="#" class="btn link-btn btn-outline btn-rounded">Reading &#8702;</a>
                                 </div>
                             </div>
@@ -30,13 +30,13 @@
                 </div>
             </div>
             <div class="col-sm-4">
-            @foreach ($slider_right as $right)
+            @foreach ($right as $rr)
                 <div class="blog-item blog-item-sm">
-                    <a href="#"><figure><img src="assets/img/masonry/360x227-2.jpg" class="img-responsive" alt=""></figure></a>
+                    <a href="#"><figure><img src="{{asset('images/'.$rr->image)}}" class="img-responsive" alt=""></figure></a>
                     <div class="blog-text">
                         <div class="content-border">
-                            <div class="post-cat"><a href="#">Travel</a></div>
-                            <h4 class="blog-title"><a href="#">It is a long <em>established</em> fact that a reader.</a></h4>
+                            <div class="post-cat"><a href="#">{{$rr->category->name}}</a></div>
+                            <h5 class="blog-title"><a href="#">{{$rr->title}}</a></h5>
                         </div>
                     </div>
                 </div>

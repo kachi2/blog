@@ -92,7 +92,7 @@
     <div class="clearfix"></div>
     <div class="container">
       <div class="newstricker_inner">
-          <div class="trending"><strong>Popular</strong> Post</div>
+          <div class="trending"> Headlings</div>
           <div id="newsTicker" class="owl-carousel owl-theme">
           @foreach ($heading as $pp )
           <div class="item">

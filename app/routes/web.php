@@ -31,7 +31,7 @@ Route::get('/advertise', 'HomeController@Advertise')->name('advertise');
 
 
 #===================ADMIN PAGES ================
-Route::prefix('console')->group(function (){
+Route::middleware('auth')->prefix('console')->group(function (){
 Route::get('/', 'AdminController@index')->name('admin.index');
 Route::get('/blog/create', 'AdminController@createBlog')->name('admin.blog.create');
 Route::get('/slider/create', 'AdminController@createSlider')->name('admin.slider.create');

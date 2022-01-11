@@ -23,8 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->take(10)->get();
-        return view('blog.home', compact('posts', $posts));
+        $data['posts'] = Post::latest()->take(10)->get();
+        $data['center'] = Post::latest()->take(3)->get();
+        $data['right'] = Post::take(2)->inRandomOrder()->get();
+        return view('blog.home', $data);
     }
 
     public function details($id){
