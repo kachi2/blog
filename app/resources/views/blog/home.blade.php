@@ -8,6 +8,7 @@
         <div class="row">
             <div class="col-sm-8">
                 <div id="blog-slide" class="owl-carousel owl-theme">
+                @foreach ($slider as $center )
                     <div class="item">
                         <div class="blog-item blog-item-lg">
                             <a href=""><figure><img src="assets/img/masonry/750x480-1.jpg" class="img-responsive" alt=""></figure></a>
@@ -25,43 +26,11 @@
                         </div>
                         <!-- /.End of blog masonry item -->
                     </div>
-                    <div class="item">
-                        <div class="blog-item blog-item-lg">
-                            <a href="#"><figure><img src="assets/img/masonry/750x480-2.jpg" class="img-responsive" alt=""></figure></a>
-                            <div class="blog-text">
-                                <div class="content-border">
-                                    <div class="post-cat"><a href="#">Inspiration & Design</a></div>
-                                    <div class="entry-meta">
-                                        <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time> </span> 
-                                        <span class="comment-link"><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>9 Comments</a></span>
-                                    </div>
-                                    <h2 class="blog-title"><a href="#">It is a long <em>established</em> fact that a reader will be distracted by the readable content of a page</a></h2>
-                                    <a href="#" class="btn link-btn btn-outline btn-rounded">Reading &#8702;</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.End of blog masonry item -->
-                    </div>
-                    <div class="item">
-                        <div class="blog-item blog-item-lg">
-                            <a href="#"><figure><img src="assets/img/masonry/750x480-3.jpg" class="img-responsive" alt=""></figure></a>
-                            <div class="blog-text">
-                                <div class="content-border">
-                                    <div class="post-cat"><a href="#">Inspiration & Design</a></div>
-                                    <div class="entry-meta">
-                                        <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time> </span> 
-                                        <span class="comment-link"><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>9 Comments</a></span>
-                                    </div>
-                                    <h2 class="blog-title"><a href="#">It is a long <em>established</em> fact that a reader will be distracted by the readable content of a page</a></h2>
-                                    <a href="#" class="btn link-btn btn-outline btn-rounded">Reading &#8702;</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.End of blog masonry item -->
-                    </div>
+                @endforeach
                 </div>
             </div>
             <div class="col-sm-4">
+            @foreach ($slider_right as $right)
                 <div class="blog-item blog-item-sm">
                     <a href="#"><figure><img src="assets/img/masonry/360x227-2.jpg" class="img-responsive" alt=""></figure></a>
                     <div class="blog-text">
@@ -71,16 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.End of blog masonry item -->
-                <div class="blog-item blog-item-sm">
-                    <a href="#"><figure><img src="assets/img/masonry/360x227-1.jpg" class="img-responsive" alt=""></figure></a>
-                    <div class="blog-text">
-                        <div class="content-border">
-                            <div class="post-cat"><a href="#">Fashion</a></div>
-                            <h4 class="blog-title"><a href="#">Sed nec quam id libero <em>mollis cursus.</em></a></h4>
-                        </div>
-                    </div>
-                </div>
+            @endforeach
                 <!-- /.End of blog masonry item -->
             </div>
         </div>

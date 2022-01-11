@@ -149,6 +149,13 @@
                                 <li><a href="">All Post</a></li>
                             </ul>
                         </li>
+                     <li>
+                            <a href="#" >Slider</a>
+                            <ul>
+                                <li><a  href="{{route('admin.slider.create')}}">Create New</a></li>
+                                <li><a href="">All Sliders</a></li>
+                            </ul>
+                        </li>
                  
                         
                           

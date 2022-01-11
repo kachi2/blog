@@ -24,18 +24,18 @@ Route::get('/crypto/businesses', 'HomeController@business')->name('crypto.busine
 Route::get('/crypto/brokers', 'HomeController@brokers')->name('crypto.brokers');
 Route::get('/crypto/invest', 'HomeController@Invest')->name('crypto.invest');
 Route::get('/crypto/exchange', 'HomeController@Exchange')->name('crypto.exchange');
-Route::get('/contact, HomeController@Contact')->name('contact.us');
-Route::get('/about, HomeController@About')->name('about.us');
-Route::get('/advertise, HomeController@Advertise')->name('advertise.us');
+Route::get('/contact', 'HomeController@Contact')->name('contact.us');
+Route::get('/about', 'HomeController@About')->name('about.us');
+Route::get('/advertise', 'HomeController@Advertise')->name('advertise');
 
 
 
 #===================ADMIN PAGES ================
-Route::prefix('cyptoconsole')->group(function (){
+Route::prefix('console')->group(function (){
 Route::get('/', 'AdminController@index')->name('admin.index');
 Route::get('/blog/create', 'AdminController@createBlog')->name('admin.blog.create');
+Route::get('/slider/create', 'AdminController@createSlider')->name('admin.slider.create');
 Route::post('/blog/store', 'AdminController@storeBlog');
+Route::post('/slider/store', 'AdminController@storeSlider');
 Route::get('/blog/index', 'AdminController@blogIndex')->name('admin.blog.index');
-
-
 });

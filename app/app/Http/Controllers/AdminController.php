@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
@@ -81,6 +82,16 @@ class AdminController extends Controller
         Session::flash('alert', 'success');
         Session::flash('message', 'Blog Updated Successfuly');
         return redirect()->back();
+    }
+
+    public function createSlider(){
+        $category = Category::get();
+        return view('admin.sliders.create', compact('category', $category));
+    }
+
+    public function storeSlider(Request $request){
+
+
     }
 
 }

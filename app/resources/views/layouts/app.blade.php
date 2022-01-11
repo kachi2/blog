@@ -35,8 +35,8 @@
                     <div class="header-nav">
                         <ul>
                             <li><span class="headre-weather"><i class="fa fa-calendar-check-o"></i>&nbsp; {{Date('D, M, d')}}</span></li>
-                            <li><a href="{{route('index')}}">Contact</a></li>
-                            <li><a href="{{route('index')}}">about</a></li>
+                            <li><a href="{{route('contact.us')}}">Contact</a></li>
+                            <li><a href="{{route('about.us')}}">about</a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                             <a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#user-modal">Advertise with us</a>
+                            <a href="{{route('advertise')}}" >Advertise with us</a>
                         </li>
                         <li>
                             <div class="weather-top">
@@ -80,11 +80,7 @@
                     <li><a href="{{route('crypto.brokers')}}">Crypto Brokers</a></li>
                     <li><a href="{{route('crypto.invest')}}">Invest in Crypto</a></li>
                     <li><a href="{{route('crypto.exchange')}}">Crypto Exchange</a></li>
-                    <div class="attr-nav">
-                      <ul>
-                         <li id="btn-search1"><a href="#" id="btn-search2"><i class="fa fa-search"></i></a></li>
-                      </ul>
-                  </div>
+                   
                 </ul>
                 
             </div><!-- /.navbar-collapse -->

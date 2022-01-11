@@ -62,4 +62,19 @@ class HomeController extends Controller
         $data['coins'] = json_decode($se, true);
         return view('blog.charts', $data);
     }
+
+
+    public function Contact(){
+        return view('blog.contact');
+    }
+
+    public function About(){
+        return view('blog.about');
+    }
+
+    public function Advertise(){
+        return view('blog.advertise');
+    }
+
+
 }
