@@ -3,14 +3,13 @@
 @section('content')
     
 <div class="clearfix"></div>
-<div class="parallax page_header"  data-parallax-bg-image="{{asset('/assets/img/header-bg.jpg')}}" data-parallax-direction="left">
+<div class="parallax page_header"  data-parallax-bg-image="{{asset('/assets/img/details.jpeg')}}" data-parallax-direction="left">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h3>Gallery Post Details</h3>
+                <h3>Post Details</h3>
                 <ol class="breadcrumb">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Post Formats</a></li>
                     <li class="active">Post</li>
                 </ol>
             </div>

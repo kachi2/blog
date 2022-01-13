@@ -11,16 +11,16 @@
                 @foreach ($center as $cc)
                     <div class="item">
                         <div class="blog-item blog-item-lg">
-                            <a href=""><figure><img src="{{asset('images/'.$cc->image)}}" class="img-responsive" alt=""></figure></a>
+                            <a href="{{route('post.details', encrypt($cc->id))}}"><figure><img src="{{asset('images/'.$cc->image)}}" class="img-responsive" alt=""></figure></a>
                             <div class="blog-text">
                                 <div class="content-border">
-                                    <div class="post-cat"><a href="#">{{$cc->category->name}}</a></div>
+                                    <div class="post-cat"><a href="{{route('post.details', encrypt($cc->id))}}">{{$cc->category->name}}</a></div>
                                     <div class="entry-meta">
                                         <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">{{$cc->created_at->format('M d, Y')}}</time> </span> 
-                                        <span class="comment-link"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>9 views</a></span>
+                                        <span class="comment-link"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>{{$cc->views}}</a></span>
                                     </div>
-                                    <h2 class="blog-title"><a href="#">{{$cc->title}} </a></h2>
-                                    <a href="#" class="btn link-btn btn-outline btn-rounded">Reading &#8702;</a>
+                                    <h2 class="blog-title"><a href="{{route('post.details', encrypt($cc->id))}}">{{$cc->title}} </a></h2>
+                                    <a href="{{route('post.details', encrypt($cc->id))}}" class="btn link-btn btn-outline btn-rounded">Read More &#8702;</a>
                                 </div>
                             </div>
                         </div>
@@ -32,11 +32,11 @@
             <div class="col-sm-4">
             @foreach ($right as $rr)
                 <div class="blog-item blog-item-sm">
-                    <a href="#"><figure><img src="{{asset('images/'.$rr->image)}}" class="img-responsive" alt=""></figure></a>
+                    <a href="{{route('post.details', encrypt($rr->id))}}"><figure><img src="{{asset('images/'.$rr->image)}}" class="img-responsive" alt=""></figure></a>
                     <div class="blog-text">
                         <div class="content-border">
-                            <div class="post-cat"><a href="#">{{$rr->category->name}}</a></div>
-                            <h5 class="blog-title"><a href="#">{{$rr->title}}</a></h5>
+                            <div class="post-cat"><a href="{{route('post.details', encrypt($rr->id))}}">{{$rr->category->name}}</a></div>
+                            <h5 class="blog-title"><a href="{{route('post.details', encrypt($rr->id))}}">{{$rr->title}}</a></h5>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,9 @@
                             <figcaption>
                                 <div class="post-cat"><a href="{{route('post.details', encrypt($post->id))}}">{{$post->category->name}}</a></div>
                                 <div class="entry-meta">
-                                    <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">{{$post->created_at->format('d, M Y')}}</time></span> 
+                                    <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="{{$post->created_at->format('d, M Y')}}">{{$post->created_at->format('d, M Y')}}</time></span> 
+                                        <span class="comment-link"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>{{$post->views}}</a></span>
+                                
                                 </div>
                                 <h4 class="grid_post_title"><a href="{{route('post.details', encrypt($post->id))}}">{{$post->title}}</a></h4>
                                 <p>{{substr($post->content,0,100)}}.</p>

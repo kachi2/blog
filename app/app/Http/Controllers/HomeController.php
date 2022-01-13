@@ -34,6 +34,8 @@ class HomeController extends Controller
         $data['post'] = Post::where('id', decrypt($id))->first();
         $data['latest'] = Post::latest()->take(5)->get();
         $data['similar'] = Post::where('category_id', $post->category->id)->take(5)->get();
+        $update = Post::where('id', $post->id)
+                    ->update(['views' => ($post->views + 10)]);
         return view('blog.details', $data);
     }
 
@@ -77,6 +79,5 @@ class HomeController extends Controller
     public function Advertise(){
         return view('blog.advertise');
     }
-
 
 }
