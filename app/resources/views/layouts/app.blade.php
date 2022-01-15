@@ -69,7 +69,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/lks.png')}}" class="logo" alt=""></a>
+                <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/cryptonews.png')}}" class="logo" alt=""></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="navFadeInDown" data-out="navFadeOutUp">
@@ -80,9 +80,7 @@
                     <li><a href="{{route('crypto.brokers')}}">Crypto Brokers</a></li>
                     <li><a href="{{route('crypto.invest')}}">Invest in Crypto</a></li>
                     <li><a href="{{route('crypto.exchange')}}">Crypto Exchange</a></li>
-                   
                 </ul>
-                
             </div><!-- /.navbar-collapse -->
            
         </div>  
