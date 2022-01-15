@@ -62,14 +62,13 @@
             </div>
         </div>
     </div>
-    <!-- /.End of top header -->
     <nav class="navbar navbar-inverse navbar-sticky navbar-mobile bootsnav">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/cryptonews.png')}}" class="logo" alt=""></a>
+                <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/logo_2.png')}}" style="top:20px" class="logo" alt=""></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="navFadeInDown" data-out="navFadeOutUp">
