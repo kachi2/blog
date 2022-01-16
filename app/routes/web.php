@@ -27,6 +27,7 @@ Route::get('/crypto/exchange', 'HomeController@Exchange')->name('crypto.exchange
 Route::get('/contact', 'HomeController@Contact')->name('contact.us');
 Route::get('/about', 'HomeController@About')->name('about.us');
 Route::get('/advertise', 'HomeController@Advertise')->name('advertise');
+Route::get('/advertise/request', 'HomeController@AdvertiseMail')->name('advertiseMail');
 
 
 

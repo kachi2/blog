@@ -31,17 +31,17 @@
                                     <p>Interested in advertising on CryptoNews? Just drop an email to advertise@CrytoNews.blog for more information and any additional clarification if required.
                                     PLEASE BE AWARE THAT SCAMMERS ARE ACTIVE IN THIS SPACE. ALWAYS CONFIRM USING AN OFFICIAL COMPANY EMAIL ADDRESS (@cryptonews.blog ONLY) BEFORE SENDING PAYMENT
                                     </p>
-                                   
+                                   <form action="{{route('advertiseMail')}}" metho="post">
                                     <div class="form-group row">
                                         <label for="name" class="col-sm-3 col-md-2 col-form-label">Name *</label>
                                         <div class="col-sm-6 col-md-5">
-                                            <input class="form-control"  name="name" id="name2" type="text">
+                                            <input class="form-control"  name="name" id="name2" type="text" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="email" class="col-sm-3 col-md-2 col-form-label">Email*</label>
                                         <div class="col-sm-6 col-md-5">
-                                            <input class="form-control" name="email" id="email2" type="text">
+                                            <input class="form-control" name="email" id="email2" type="email" required>
                                         </div>
                                     </div>
                                      <div class="form-group row">
@@ -59,15 +59,19 @@
                                     <div class="form-group row">
                                         <label for="website" class="col-sm-3 col-md-2 col-form-label">Website</label>
                                         <div class="col-sm-6 col-md-5">
-                                            <input class="form-control" id="website" type="text">
+                                            <input class="form-control" name="website" id="website" type="text"  required>
                                         </div>
                                     </div>
                                      <div class="form-group">
                                       <label for="website" class="">Additional Notes</label>
-                                        <textarea class="form-control" id="textarea" rows="5"></textarea>
+                                        <textarea class="form-control" name="note" id="textarea" rows="5"  required></textarea>
                                     </div>
-                                    <a href="#" class="btn link-btn">Submit ⇾</a>
+                                    <button  class="btn link-btn">Submit ⇾</button>
+                                    @if(Session::has('message'))
+                                        <span class="alert alert-success" role='alert'> {{Session::get('message')}}
+                                    @endif
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>

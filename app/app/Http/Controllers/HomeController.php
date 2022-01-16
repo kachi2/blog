@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Mail\Advertise;
+use Illuminate\Support\Facades\Session;
+use App\Mail\AdvertiseAdmin;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 class HomeController extends Controller
 {
     /**
@@ -21,6 +26,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
         $data['posts'] = Post::latest()->take(10)->get();
@@ -77,5 +83,21 @@ class HomeController extends Controller
     public function Advertise(){
         return view('blog.advertise');
     }
+
+    public function AdvertiseMail(Request $request){
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'website' => $request->website,
+            'notes' => $request->notes
+        ];
+        Mail::to($request->email)->send(new Advertise($data));
+        Mail::to('danniejames1984@gmail.com')->send(new AdvertiseAdmin($data));
+        Session::flash('message', 'Request sent Successfully');
+        return back();
+    }
+    
+
+
 
 }
