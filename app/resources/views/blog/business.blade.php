@@ -13,7 +13,7 @@
   <div class="page-content">
                 <div class="container">
                     <div class="row">
-                     <main class="col-xs-12 col-sm-12 col-md-8 content p_r_40">
+                     <main class="col-xs-12 col-sm-12 col-md-9 content p_r_40">
                        <div class="p-2"> <p> Here is a list of Bitcoin Businesses, startups and companies in the cryptocurrency industry, creating a market and contributing to the revolution.
 
 ​If you’d like to see your business listed here, get in touch at </p> </div>

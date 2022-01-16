@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="clearfix"></div>
 <div class="parallax page_header"  data-parallax-bg-image="{{asset('assets/img/ex.jpg')}}" data-parallax-direction="left">

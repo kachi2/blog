@@ -13,7 +13,7 @@
  <div class="page-content">
                 <div class="container">
                     <div class="row">
-                     <main class="col-xs-12 col-sm-12 col-md-8 content p_r_40">
+                     <main class="col-xs-12 col-sm-12 col-md-9 content p_r_40">
                        <div class="p-2"> <p> Bitcoin investment is a highly risky investment program, Zenithcapital has highly trained professional that invest your capital and makes return for you. </p> </div>
                             <!-- /.End of grid post -->
                             <div style="padding-bottom: 20px"></div>

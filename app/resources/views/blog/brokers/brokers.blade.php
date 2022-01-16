@@ -13,7 +13,7 @@
   <div class="page-content">
                 <div class="container">
                     <div class="row">
-                     <main class="col-xs-12 col-sm-12 col-md-8 content p_r_40">
+                     <main class="col-xs-12 col-sm-12 col-md-9 content p_r_40">
                        <div class="p-2"> <p> Finding a bitcoin broker is definitely something every bitcoin trader needs to consider in order to actively engage with the cryptocurrency market. However, it’s challenging to identify the best bitcoin brokers because there’s just too many of them.
 
                         There are a few things you’d have to look out for when reading bitcoin brokers reviews. These include:
