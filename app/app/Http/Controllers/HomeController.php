@@ -89,12 +89,28 @@ class HomeController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'website' => $request->website,
-            'notes' => $request->notes
+            'notes' => $request->notes,
+            'subject' => 'Advert Reqeust'
         ];
         Mail::to($request->email)->send(new Advertise($data));
         Mail::to('danniejames1984@gmail.com')->send(new AdvertiseAdmin($data));
         Session::flash('message', 'Request sent Successfully');
         return back();
+    }
+
+    public function ContactUs(Request $request){
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'website' => $request->website,
+            'notes' => $request->notes,
+            'subject' => 'Contact Us',
+        ];
+        Mail::to($request->email)->send(new Advertise($data));
+        Mail::to('danniejames1984@gmail.com')->send(new AdvertiseAdmin($data));
+        Session::flash('message', 'Request sent Successfully');
+        return back();
+
     }
     
 
