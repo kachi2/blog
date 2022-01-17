@@ -43,8 +43,8 @@
                 <div class="col-sm-6 col-md-5">
                     <ul class="top-socia-share">
                         <li>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            {{-- <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a> --}}
                         </li>
                         <li>
                             <a href="{{route('advertise')}}" >Advertise with us</a>
@@ -77,7 +77,7 @@
                     </li>
                     <li class="dropdown"><a href="{{route('crypto.business')}}">Crypto Business</a></li>
                     <li><a href="{{route('crypto.brokers')}}">Crypto Brokers</a></li>
-                    <li><a href="{{route('crypto.invest')}}">Invest in Crypto</a></li>
+                    <li><a href="#">Invest in Crypto</a></li>
                     <li><a href="{{route('crypto.exchange')}}">Crypto Exchange</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
