@@ -40,7 +40,7 @@
                                 </div>
                                     <div class="col-md-6">
                                   <div class="custom-file">
-                                            <select type="file"name="category" class="custom-file-input  @error('category') is-invalid @enderror" id="customFile">
+                                            <select name="category" class="form-control @error('category') is-invalid @enderror" id="customFile">
                                                 
                                                 <option>  Select Category </option>
                                                 @foreach ($category as $cat )
