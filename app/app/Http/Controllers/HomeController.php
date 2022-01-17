@@ -31,6 +31,7 @@ class HomeController extends Controller
     {
         $data['posts'] = Post::latest()->take(10)->get();
         $data['center'] = Post::latest()->take(3)->get();
+        $data['recent'] = Post::where('views', '>', 3)->take(5)->get();
         $data['right'] = Post::take(2)->inRandomOrder()->get();
         return view('blog.home', $data);
     }

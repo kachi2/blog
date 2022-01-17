@@ -85,49 +85,29 @@
                         <span class="title-shape title-shape-dark"></span>
                     </div>
                     <!--  /.End of title -->
+                    @foreach ($recent as $cc)
                     <div class="media latest_post">
-                        <a class="media-left" href="#">
-                            <img src="assets/img/100x70-1.jpg" class="media-object" alt="">
+                        <a href="{{route('post.details', encrypt($post->id))}}" class="grid_image"><img src="{{asset('images/'.$cc->image)}}" class="media-object" alt="">
                         </a>
                         <div class="media-body">
-                            <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics From Copenhagen</a></h6>
+                            <h6 class="media-heading"><a href="{{route('post.details', encrypt($cc->id))}}">{{$cc->title}}</a></h6>
                             <div class="entry-meta">
-                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time> </span> 
+                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="{{$cc->created_at->format('d, M Y')}}">{{$cc->created_at->format('d, M Y')}}<</time> </span> 
                             </div>
                         </div>
-                    </div>
+                    </div>   
+                    @endforeach
                     <!-- /.latest post -->
-                    <div class="media latest_post">
-                        <a class="media-left" href="#">
-                            <img src="assets/img/100x70-2.jpg" class="media-object" alt="">
-                        </a>
-                        <div class="media-body">
-                            <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics From Copenhagen</a></h6>
-                            <div class="entry-meta">
-                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time> </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.latest post -->
-                    <div class="media latest_post">
-                        <a class="media-left" href="#">
-                            <img src="assets/img/100x70-3.jpg" class="media-object" alt="">
-                        </a>
-                        <div class="media-body">
-                            <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics From Copenhagen</a></h6>
-                            <div class="entry-meta">
-                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time> </span> 
-                            </div>
-                        </div>
-                    </div>
+                   
+                    
                     <!-- /.latest post -->
                 </div>
                 <!-- /.End of latest post -->
                
                 <!-- /.End of subscribe -->
-                <div class="banner-content">
+                {{-- <div class="banner-content">
                     <img src="{{asset('/assets/img/ad-300x250-1.png')}}" class="img-responsive" alt="">
-                </div>
+                </div> --}}
                 
                 <!-- /.End of facebook like box -->
             </aside>
