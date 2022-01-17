@@ -104,12 +104,12 @@
             @yield('content')
 
  <!-- /. End of instagram -->
- <footer class="footer-black">
+ <footer class="footer-white">
   <div class="main-footer">
       <div class="container">
           <div class="row">
               <div class="col-sm-5 col-md-5">
-                  <h3 class="widget-title title-white">About Us</h3>
+                  <h3 class="widget-title title-black">About Us</h3>
                   <div class="footer-box">
                       <p>CryptoNews cryptocurrency news service that covers bitcoin news today and other coins, technical analysis & forecasts for bitcoin price and other altcoins. Here at CrytoNews, we are dedicated to enlightening everyone about bitcoin and other cryptocurrencies.</p>
                       <p>Contact us on <a href="mailto:info@cryptonews.blog"><strong>info@cryptonews.blog</strong></a></p> 
@@ -117,7 +117,7 @@
               </div>
               <div class="col-sm-3 col-md-2">
                   <div class="footer-box">
-                      <h3 class="widget-title title-white">Links</h3>
+                      <h3 class="widget-title title-black">Links</h3>
                       <ul class="footer-cat">
                       <a href="{{route('crypto.business')}}">Crypto Business</a></li>
                     <li><a href="{{route('crypto.brokers')}}">Crypto Brokers</a></li>
@@ -128,7 +128,7 @@
               </div>
               <div class="col-sm-5 col-md-4">
                   <div class="footer-box">
-                      <h3 class="widget-title title-white">Popular Post</h3>
+                      <h3 class="widget-title title-black">Recent Post</h3>
                       
                       @foreach ($popular as $pp)
                       <div class="media latest_post">

@@ -29,10 +29,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $popular = Post::where('views', '>', 0)->take(3)->get();
+        $popular = Post::latest()->take(3)->get();
         View::share('popular',$popular);
 
-        $heading = Post::inRandomOrder()->get();
+        $heading = Post::latest()->take(6)->get();
         View::share('heading', $heading);
     }
 }
