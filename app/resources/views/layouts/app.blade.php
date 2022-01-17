@@ -13,7 +13,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
    	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700%7CSource+Sans+Pro:200,300,400,500,600,700,900" rel="stylesheet">
     <!-- Styles -->
-  <link href="{{asset('/assets/img/favicon.png')}}" rel="icon">
+  <link href="{{asset('/images/fav.png')}}" rel="icon">
   <link href="{{asset('/assets/css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{asset('/assets/css/animsition.min.css')}}" rel="stylesheet">
   <link href="{{asset('/assets/css/font-awesome.min.css')}}" rel="stylesheet">
@@ -77,7 +77,7 @@
                     </li>
                     <li class="dropdown"><a href="{{route('crypto.business')}}">Crypto Business</a></li>
                     <li><a href="{{route('crypto.brokers')}}">Crypto Brokers</a></li>
-                    <li><a href="#">Invest in Crypto</a></li>
+                    <li><a href="{{route('crypto.invest')}}">Invest in Crypto</a></li>
                     <li><a href="{{route('crypto.exchange')}}">Crypto Exchange</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -89,7 +89,7 @@
     <div class="clearfix"></div>
     <div class="container">
       <div class="newstricker_inner">
-          <div class="trending"> Headlings</div>
+          <div class="trending"> Trending Post</div>
           <div id="newsTicker" class="owl-carousel owl-theme">
           @foreach ($heading as $pp )
           <div class="item">
