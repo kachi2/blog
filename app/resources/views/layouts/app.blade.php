@@ -112,7 +112,7 @@
                   <h3 class="widget-title title-black">About Us</h3>
                   <div class="footer-box">
                       <p>CryptoNews cryptocurrency news service that covers bitcoin news today and other coins, technical analysis & forecasts for bitcoin price and other altcoins. Here at CrytoNews, we are dedicated to enlightening everyone about bitcoin and other cryptocurrencies.</p>
-                      <p>Contact us on <a href="mailto:info@cryptonews.blog"><strong>info@cryptonews.blog</strong></a></p> 
+                      <p>Contact us on <a href="mailto:support@cryptonewsupdate24.com"><strong>support@cryptonewsupdate24.com</strong></a></p> 
                   </div>
               </div>
               <div class="col-sm-3 col-md-2">

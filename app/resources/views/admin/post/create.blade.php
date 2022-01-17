@@ -40,12 +40,18 @@
                                 </div>
                                     <div class="col-md-6">
                                   <div class="custom-file">
-                                            <input type="file"name="image" class="custom-file-input  @error('image') is-invalid @enderror" id="customFile">
-                                                <label class="custom-file-label" for="customFile">Choose Image</label>
+                                            <select type="file"name="category" class="custom-file-input  @error('category') is-invalid @enderror" id="customFile">
+                                                
+                                                <option>  Select Category </option>
+                                                @foreach ($category as $cat )
+                                                    <option value=""> {{$cat->name}} </option>
+                                                @endforeach
+                                            </select>
+                                                
                                             </div>
-                                            <small id="emailHelp" class="form-text text-muted">Upload blog Cover Image
+                                            <small id="emailHelp" class="form-text text-muted">Select Category
                                             </small>
-                                              @error('image')
+                                              @error('category')
                                             <span class="invalid-feedback"> <small> *</small> </span>
                                             @enderror
                                          </div>

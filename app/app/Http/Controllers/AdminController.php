@@ -17,7 +17,8 @@ class AdminController extends Controller
 
 
     public function createBlog(){
-        return view('admin.post.create');
+        $category = Category::get();
+        return view('admin.post.create', compact('category', $category));
     }
 
 
