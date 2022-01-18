@@ -44,7 +44,7 @@
                                                 
                                                 <option>  Select Category </option>
                                                 @foreach ($category as $cat )
-                                                    <option value=""> {{$cat->name}} </option>
+                                                    <option value="{{$cat->id}}"> {{$cat->name}} </option>
                                                 @endforeach
                                             </select>
                                                 
@@ -59,17 +59,26 @@
                                          <div class="col-md-12">
                                   <div class="form-group">
                                     
-                                    <textarea  class="form-control @error('content') is-invalid @enderror"  name="content" >{{old('content')}}</textarea>
+                                    <textarea  id="summernote" class="form-control @error('content') is-invalid @enderror"  name="content" >{{old('content')}}</textarea>
                                      <small id="emailHelp" class="form-text text-muted">Write Blog Content
                                             </small>
-                                            <script>
-                                                CKEDITOR.replace('content');
-                                        </script>                        
+                                                                    
                                             @error('content')
                                             <span class="invalid-feedback"> <small> *</small> </span>
                                             @enderror
                                     </div>
                                          </div>
+                                         <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="file" name="image"  value="{{old('image')}}" class="form-control @error('image') is-invalid @enderror" id="exampleInputEmail1"
+                                                   aria-describedby="emailHelp" placeholder="Blog Image">
+                                            <small id="emailHelp" class="form-text text-muted">Blog Image
+                                            </small>
+                                            @error('image')
+                                            <span class="invalid-feedback"> <small> * </small> </span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                            
                             </div> 
                         </div>
@@ -103,6 +112,10 @@
 @endsection
 @section('script')
 <script>
+
+$(document).ready(function() {
+  $('#summernote').summernote();
+});
 
 $('.clockpicker-example').clockpicker({
     autoclose: true

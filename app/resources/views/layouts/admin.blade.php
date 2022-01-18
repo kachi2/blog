@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{asset('/backend/vendors/vmap/jqvmap.min.css')}}">
 
     <link rel="stylesheet" href="{{asset('/backend/css/app.min.css')}}" type="text/css">
-    <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
     
 </head>
 <body>
@@ -210,6 +210,8 @@
 <script src="{{asset('/backend/vendors/vmap/jquery.vmap.min.js')}}"></script>
 <script src="{{asset('/backend/vendors/vmap/maps/jquery.vmap.usa.js')}}"></script>
 <script src="{{asset('/backend/js/examples/vmap.js')}}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <!-- Dashboard scripts -->
 <script src="{{asset('/backend/js/examples/dashboard.js')}}"></script>
 <div class="colors"> <!-- To use theme colors with Javascript -->
