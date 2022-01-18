@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{asset('/backend/vendors/vmap/jqvmap.min.css')}}">
 
     <link rel="stylesheet" href="{{asset('/backend/css/app.min.css')}}" type="text/css">
+    <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
 </head>
 <body>
 

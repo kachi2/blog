@@ -59,9 +59,12 @@
                                          <div class="col-md-12">
                                   <div class="form-group">
                                     
-                                    <textarea class="form-control @error('content') is-invalid @enderror"  placeholder="Blog Content" name="content" rows="3" cols="4">{{old('content')}}</textarea>
+                                    <textarea  class="form-control @error('content') is-invalid @enderror"  name="content" >{{old('content')}}</textarea>
                                      <small id="emailHelp" class="form-text text-muted">Write Blog Content
                                             </small>
+                                            <script>
+                                                CKEDITOR.replace('content');
+                                        </script>                        
                                             @error('content')
                                             <span class="invalid-feedback"> <small> *</small> </span>
                                             @enderror
