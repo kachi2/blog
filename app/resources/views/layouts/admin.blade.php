@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cryptox.com</title>
+    <title>{{ config('app.name', 'CryptoNewsUpdate24') }}</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('/images/fav2.png')}}"/>
+  <link href="{{asset('/images/fav.png')}}" rel="icon">
 
     <!-- Plugin styles -->
     <link rel="stylesheet" href="{{asset('/backend/vendors/bundle.css')}}" type="text/css">
@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="{{asset('/backend/css/app.min.css')}}" type="text/css">
     <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+    
 </head>
 <body>
 

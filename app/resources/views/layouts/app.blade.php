@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="">
 	<meta name="keywords" content="">
-	<meta name="description" content="Crypto News blog is a cryptocurrency news service that covers latest bitcoin news today, technical analysis &amp; price for bitcoin and other altcoins">
+	<meta name="description" content="CryptoNewsUpdate24 is a cryptocurrency news service that covers latest bitcoin news today, technical analysis price for bitcoin and other altcoins">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'cryptonews24') }}</title>
+    <title>{{ config('app.name', 'CryptoNewsUpdate24') }}</title>
     <!-- Scripts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
    	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700%7CSource+Sans+Pro:200,300,400,500,600,700,900" rel="stylesheet">
@@ -99,10 +99,8 @@
           </div>
       </div>
   </div>
-    <!-- /.End of navigation -->
-                
+    <!-- /.End of navigation -->       
             @yield('content')
-
  <!-- /. End of instagram -->
  <footer class="footer-white">
   <div class="main-footer">
