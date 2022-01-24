@@ -16,7 +16,7 @@
         </div>
     </div>
 </div>
-<div class="page-content">
+<div class="page-content"> 
     <div class="container">
         <div class="row">
             <main class="col-sm-8 col-md-9 content p_r_40">
@@ -49,16 +49,15 @@
                            
                         </div>
                       
-                        <p>{{$post->content}}</p>
+                        <p>{!!$post->content!!}</p>
                     </div>
                     <!-- /.End of post details -->
                     <div class="stickyshare">
                         <aside class="share_article">
-                            <a href="#" class="boxed_icon facebook" data-share-url="http://mightymedia.nl" data-share-network="facebook" data-share-text="Share this awesome link on Facebook" data-share-title="Facebook Share" data-share-via="" data-share-tags="" data-share-media=""><i class="fa fa-facebook"></i><span>28</span></a>
-                            <a href="#" class="boxed_icon twitter" data-share-url="http://mightymedia.nl" data-share-network="twitter" data-share-text="Share this awesome link on Twitter" data-share-title="Twitter Share" data-share-via="" data-share-tags="" data-share-media=""><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="boxed_icon google-plus" data-share-url="http://mightymedia.nl" data-share-network="googleplus" data-share-text="Share this awesome link on Google+" data-share-title="Google+ Share" data-share-via="" data-share-tags="" data-share-media=""><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="boxed_icon pinterest" data-share-url="http://mightymedia.nl" data-share-network="pinterest" data-share-text="Share this awesome link on Pinterest" data-share-title="Pinterest Share" data-share-via="" data-share-tags="" data-share-media=""><i class="fa fa-pinterest-p"></i></a>
-                            <a href="#" class="boxed_icon comment"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="14" height="14" viewBox="0 0 14 14" enable-background="new 0 0 14 14" xml:space="preserve"><path d="M3.6 14c0 0-0.1 0-0.1 0 -0.1-0.1-0.2-0.2-0.2-0.3v-2.7h-2.9C0.2 11 0 10.8 0 10.6V0.4C0 0.2 0.2 0 0.4 0h13.3C13.8 0 14 0.2 14 0.4v10.2c0 0.2-0.2 0.4-0.4 0.4H6.9L3.9 13.9C3.8 14 3.7 14 3.6 14zM0.7 10.2h2.9c0.2 0 0.4 0.2 0.4 0.4v2.2l2.5-2.4c0.1-0.1 0.2-0.1 0.2-0.1h6.6v-9.5H0.7V10.2z"></path></svg><span>3</span></a>
+                            <a href="#" class="boxed_icon facebook" data-share-url="{{route('post.details', encrypt($post->id))}}" data-share-network="facebook" data-share-text="Share this awesome link on Facebook" data-share-title="Facebook Share" data-share-via="" data-share-tags="" data-share-media=""><i class="fa fa-facebook"></i><span>{{$post->id + 20}}</span></a>
+                            <a href="#" class="boxed_icon twitter" data-share-url="{{route('post.details', encrypt($post->id))}}" data-share-network="twitter" data-share-text="Share this awesome link on Twitter" data-share-title="Twitter Share" data-share-via="" data-share-tags="" data-share-media=""><i class="fa fa-twitter"></i>{{$post->id + 10}}</span></a>
+                            <a href="#" class="boxed_icon google-plus" data-share-url="{{route('post.details', encrypt($post->id))}}" data-share-network="googleplus" data-share-text="Share this awesome link on Google+" data-share-title="Google+ Share" data-share-via="" data-share-tags="" data-share-media=""><i class="fa fa-google-plus"></i>{{$post->id + 5}}</span></a>
+                            <a href="#" class="boxed_icon pinterest" data-share-url="{{route('post.details', encrypt($post->id))}}" data-share-network="pinterest" data-share-text="Share this awesome link on Pinterest" data-share-title="Pinterest Share" data-share-via="" data-share-tags="" data-share-media=""><i class="fa fa-pinterest-p"></i>{{$post->id + 2}}</span></a>
                         </aside>
                     </div>
                     <!-- /End of share icon -->
@@ -79,7 +78,7 @@
                                         <img class="img-responsive" src="{{asset('images/'.$sm->image)}}" alt="">
                                     </figure>
                                 </a>
-                                <h4><a href="#">{{$sm->title}}</a></h4>
+                                <h4><a href="{{route('post.details', encrypt($sm->id))}}">{{$sm->title}}</a></h4>
                             </article>
                             <!-- /.End of related post -->
                         </div>
