@@ -85,11 +85,11 @@
                         <span class="title-shape title-shape-dark"></span>
                     </div>
                     <!--  /.End of title -->
-                  
+                   
                           @foreach ($recent as $cc)
                        <div class="media latest_post">
-                                    <a class="media-left" href="#">
-                                        <img src="{{route('post.details', encrypt($post->id))}}" width="100px" class="media-object" alt="">
+                                    <a class="media-left" href="{{route('post.details', encrypt($post->id))}}">
+                                        <img src="{{asset('images/'.$cc->image)}}" width="100px" class="media-object" alt="">
                                     </a>
                                     <div class="media-body">
                                         <h6 class="media-heading"><a href="{{route('post.details', encrypt($post->id))}}">{{$cc->title}}</a></h6>
