@@ -77,7 +77,7 @@
                   
                 </div>
             </main>
-            <aside class="col-sm-3 col-md-4 p_l_40 rightSidebar">
+            <aside class="col-sm-2 col-md-2 p_l_40 rightSidebar">
                 <!-- /.End of about -->
                 <div class="latest_post_widget">
                     <div class="title-holder">
