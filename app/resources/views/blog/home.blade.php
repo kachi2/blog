@@ -92,7 +92,7 @@
                         <div class="media-body">
                             <h6 class="media-heading"><a href="{{route('post.details', encrypt($cc->id))}}">{{$cc->title}}</a></h6>
                             <div class="entry-meta">
-                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="{{$cc->created_at->format('d, M Y')}}">{{$cc->created_at->format('d, M Y')}}<</time> </span> 
+                                <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="{{$cc->created_at->format('d, M Y')}}">{{$cc->created_at->format('d, M Y')}}</time> </span> 
                             </div>
                         </div>
                     </div>   

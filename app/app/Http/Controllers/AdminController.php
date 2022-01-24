@@ -39,6 +39,7 @@ class AdminController extends Controller
         $blog = new Post;
         $blog->title = $request->title;
         $blog->content = $request->content;
+        $blog->category_id = $request->category;
         $blog->image('image', $blog);
         $blog->save();
         Session::flash('alert', 'success');
