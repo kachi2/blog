@@ -73,7 +73,7 @@
                     @foreach ($similar as $sm )
                         <div class="col-sm-4">
                             <article class="post_article item_related">
-                                <a class="post_img" href="#">
+                                <a class="post_img" href="{{route('post.details', encrypt($sm->id))}}">
                                     <figure>
                                         <img class="img-responsive" src="{{asset('images/'.$sm->image)}}" alt="">
                                     </figure>
