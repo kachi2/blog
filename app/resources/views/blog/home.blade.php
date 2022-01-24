@@ -87,7 +87,7 @@
                     <!--  /.End of title -->
                     @foreach ($recent as $cc)
                     <div class="media latest_post">
-                        <a href="{{route('post.details', encrypt($post->id))}}"><img src="{{asset('images/'.$cc->image)}}" class="media-object" alt="">
+                        <a href="{{route('post.details', encrypt($post->id))}}"><img style="width:100px; height:70px"src="{{asset('images/'.$cc->image)}}" class="media-object" alt="">
                         </a>
                         <div class="media-body">
                             <h6 class="media-heading"><a href="{{route('post.details', encrypt($cc->id))}}">{{$cc->title}}</a></h6>
