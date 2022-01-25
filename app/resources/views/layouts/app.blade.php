@@ -68,7 +68,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/logo_33.png')}}" style="top:20px" class="logo" alt=""></a>
+                <a class="navbar-brand" href="{{route('index')}}"><p style="color:#fff; font-weight:bolder; margin-top:10px"> CryptoNewsUpdate<span style="font-size:25px; font-weight:bold; background:#fff; color:#000; border-radius:5px">24</span> </p></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-center" data-in="navFadeInDown" data-out="navFadeOutUp">

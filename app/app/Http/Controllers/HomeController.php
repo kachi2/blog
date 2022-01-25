@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Post;
 use App\Mail\Advertise;
@@ -42,7 +41,7 @@ class HomeController extends Controller
         $data['latest'] = Post::latest()->take(5)->get();
         $data['similar'] = Post::where('category_id', $post->category->id)->take(5)->get();
         $update = Post::where('id', $post->id)
-                    ->update(['views' => ($post->views + 10)]);
+                    ->update(['views' => ($post->views + 7)]);
         return view('blog.details', $data);
     }
 
