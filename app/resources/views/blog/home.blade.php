@@ -65,7 +65,7 @@
                                 
                                 </div>
                                 <h4 class="grid_post_title"><a href="{{route('post.details', encrypt($post->id))}}">{{$post->title}}</a></h4>
-                                <p>{!!substr($post->content,0,100)!!}.</p>
+                                <p style="font-size:14px; text-decoration:none; font-weight:none">{!! substr($post->content,0,100) !!}.</p>
                                 <a href="{{route('post.details', encrypt($post->id))}}" class="btn link-btn btn-outline btn-rounded">Reading &#8702;</a>
                                 <!-- /.Post button -->
                             </figcaption>
