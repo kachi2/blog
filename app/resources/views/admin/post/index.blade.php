@@ -59,9 +59,6 @@
                                                 <td>
                                                     <a href="#">{{$blog->views}}</a>
                                                 </td>
-                                                <td>
-                                                    {{$blog->comment_count}}
-                                                </td>
                                                 <td>{{$blog->created_at}}</td>]
                     
                                                 <td class="text-right">
