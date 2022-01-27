@@ -73,6 +73,7 @@ class AdminController extends Controller
 
         $blog = Post::where('id', $dst)->first();
         $blog->title = $request->title;
+        $blog->category_id = $request->category;
         $blog->content = $request->content;
         $blog->image('image', $blog);
         $blog->save();
