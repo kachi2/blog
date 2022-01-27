@@ -42,7 +42,6 @@
                                                 <th>Image</th>
                                                 <th>Views</th>
                                                 <th>Date Posted</th>
-                                                 <th>Time Posted</th>
                                                 <th></th>
                                             </tr>
                                             </thead>
@@ -63,8 +62,7 @@
                                                 <td>
                                                     {{$blog->comment_count}}
                                                 </td>
-                                                <td>{{$blog->created_at->format('d/M/Y')}}</td>
-                                                 <td>{{$blog->created_at->format('H:i:s')}}</td>
+                                                <td>{{$blog->created_at}}</td>]
                     
                                                 <td class="text-right">
                                                     <div class="dropdown">
