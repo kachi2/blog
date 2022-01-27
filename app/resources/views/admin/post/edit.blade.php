@@ -41,7 +41,7 @@
                                   <div class="custom-file">
                                             <select name="category" class="form-control @error('category') is-invalid @enderror" id="customFile">
                                                 
-                                                <option>  Select Category </option>
+                                                  <option value="{{$blog->category->id}}"> {{$blog->category->name}} </option>
                                                 @foreach ($category as $cat )
                                                     <option value="{{$cat->id}}"> {{$cat->name}} </option>
                                                 @endforeach
