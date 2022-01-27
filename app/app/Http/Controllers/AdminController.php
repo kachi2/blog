@@ -53,13 +53,14 @@ class AdminController extends Controller
     }
 
     public function editBlog($id){
-        $dst = $this->decrypt($id);
+        $dst = decrypt($id);
+        $category = Category::get();
         $blog = Post::where('id', $dst)->first();
-        return view('admin.post.edit', compact('blog'));
+        return view('admin.post.edit', compact('blog', 'category'));
     }
 
     public function updateBlog(Request $request, $id){
-        $dst = $this->decrypt($id);
+        $dst = decrypt($id);
         $validate = Validator::make($request->all(), [
             'title' => 'required',
             'content' => 'required',
@@ -73,27 +74,11 @@ class AdminController extends Controller
         $blog = Post::where('id', $dst)->first();
         $blog->title = $request->title;
         $blog->content = $request->content;
-        if(isset($request->status)){
-            $status = $request->status;
-        }else{
-            $status = 1;
-        }
-        $blog->status = $status;
         $blog->image('image', $blog);
         $blog->save();
         Session::flash('alert', 'success');
         Session::flash('message', 'Blog Updated Successfuly');
         return redirect()->back();
-    }
-
-    public function createSlider(){
-        $category = Category::get();
-        return view('admin.sliders.create', compact('category', $category));
-    }
-
-    public function storeSlider(Request $request){
-
-
     }
 
 }

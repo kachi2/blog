@@ -131,8 +131,8 @@
             <div>
                 <div id="navigation-logo">
                     <a href="">
-                        <img class="logo" src="{{asset('/images/logoss.png')}}">
-                        <img class="logo-light" src="{{asset('/images/logos.png')}}" alt="light logo">
+                        <img class="logo" src="{{asset('/images/fav.png')}}" width="50px">
+                        <img class="logo-light" src="{{asset('/images/fav.png')}}" width="50px" alt="light logo">
                     </a>
                 </div>
             </div>
@@ -148,19 +148,9 @@
                             <a href="#" >Post</a>
                             <ul>
                                 <li><a  href="{{route('admin.blog.create')}}">Create New</a></li>
-                                <li><a href="">All Post</a></li>
+                                <li><a href="{{route('admin.blog.index')}}">All Post</a></li>
                             </ul>
-                        </li>
-                     <li>
-                            <a href="#" >Slider</a>
-                            <ul>
-                                <li><a  href="{{route('admin.slider.create')}}">Create New</a></li>
-                                <li><a href="">All Sliders</a></li>
-                            </ul>
-                        </li>
-                 
-                        
-                          
+                        </li>      
                     </ul>
                 </div>
             </div>

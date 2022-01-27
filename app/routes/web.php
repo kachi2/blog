@@ -36,8 +36,8 @@ Route::get('/contact-us', 'HomeController@ContactUs')->name('contactUs');
 Route::middleware('auth')->prefix('console')->group(function (){
 Route::get('/', 'AdminController@index')->name('admin.index');
 Route::get('/blog/create', 'AdminController@createBlog')->name('admin.blog.create');
-Route::get('/slider/create', 'AdminController@createSlider')->name('admin.slider.create');
 Route::post('/blog/store', 'AdminController@storeBlog');
-Route::post('/slider/store', 'AdminController@storeSlider');
 Route::get('/blog/index', 'AdminController@blogIndex')->name('admin.blog.index');
+Route::get('/blog/edit/{id}', 'AdminController@editBlog')->name('admin.blog.edit');
+Route::post('/blog/update/{id}', 'AdminController@updateBlog');
 });
