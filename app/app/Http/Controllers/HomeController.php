@@ -32,6 +32,7 @@ class HomeController extends Controller
         $data['center'] = Post::latest()->take(3)->get();
         $data['recent'] = Post::where('views', '>', 3)->take(5)->get();
         $data['right'] = Post::take(2)->inRandomOrder()->get();
+        $data['title'] = 'Crypto news today';
         return view('blog.home', $data);
     }
 
@@ -40,6 +41,7 @@ class HomeController extends Controller
         $data['post'] = Post::where('id', decrypt($id))->first();
         $data['latest'] = Post::latest()->take(5)->get();
         $data['similar'] = Post::where('category_id', $post->category->id)->take(5)->get();
+        $data['title'] = 'News Details';
         $update = Post::where('id', $post->id)
                     ->update(['views' => ($post->views + 7)]);
         return view('blog.details', $data);
@@ -47,16 +49,19 @@ class HomeController extends Controller
 
     public function business(){
         $data['latest'] = Post::latest()->take(5)->get();
+        $data['title'] = 'Business';
         return view('blog.business', $data);
     }
 
     public function brokers(){
         $data['latest'] = Post::latest()->take(5)->get();
+        $data['title'] = 'Brokers';
         return view('blog.brokers.brokers', $data);
     }
 
     public function Invest(){
         $data['latest'] = Post::latest()->take(5)->get();
+        $data['title'] = 'Trade';
         return view('blog.brokers.invest', $data);
     }
 
@@ -70,18 +75,22 @@ class HomeController extends Controller
         $se = curl_exec($cURLConnection);
         curl_close($cURLConnection);  
         $data['coins'] = json_decode($se, true);
+        $data['title'] = 'Exchange';
         return view('blog.charts', $data);
     }
     public function Contact(){
-        return view('blog.contact');
+        $data['title'] = 'contact';
+        return view('blog.contact', $data);
     }
 
     public function About(){
-        return view('blog.about');
+        $data['title'] = 'About';
+        return view('blog.about', $data);
     }
 
     public function Advertise(){
-        return view('blog.advertise');
+        $data['title'] = 'Advertise';
+        return view('blog.advertise', $data);
     }
 
     public function AdvertiseMail(Request $request){

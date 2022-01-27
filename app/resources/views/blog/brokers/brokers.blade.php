@@ -151,7 +151,7 @@
                         <aside class="col-xs-12 col-sm-4 col-md-3 rightSidebar">
                             <div class="latest_post_widget">
                                 <div class="title-holder">
-                                    <h3 class="title">Most Popular</h3>
+                                    <h3 class="title">Adverts</h3>
                                     <span class="title-shape title-shape-dark"></span>
                                 </div>
                                 <!--  /.End of title -->
