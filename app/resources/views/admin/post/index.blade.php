@@ -59,7 +59,7 @@
                                                 <td>
                                                     <a href="#">{{$blog->views}}</a>
                                                 </td>
-                                                <td>{{$blog->created_at}}</td>]
+                                                <td>{{$blog->created_at}}</td>
                     
                                                 <td class="text-right">
                                                     <div class="dropdown">
