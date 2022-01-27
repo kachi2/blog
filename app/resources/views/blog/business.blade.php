@@ -16,7 +16,7 @@
                      <main class="col-xs-12 col-sm-12 col-md-9 content p_r_40">
                        <div class="p-2"> <p> Here is a list of Bitcoin Businesses, startups and companies in the cryptocurrency industry, creating a market and contributing to the revolution.
 
-​If you’d like to see your business listed here, get in touch at </p> </div>
+​If you’d like to see your business listed here, <a href="{{route('advertise')}}">  click here</a> </p> </div>
 
                             <!-- /.End of grid post -->
                             <div style="padding-bottom: 20px"></div>
@@ -180,7 +180,7 @@
                                         <h3 class="media-heading"><a target="_blank" href="https://zenithcapital.cc/">ZenithCapital CC</a></h3>
                                         <!-- /.Post meta -->
                                     </div>
-                                    <p>ZenithCapital is your partner for Trading online through our premium online brokerage. As a provider for online trading and investment services we offer you reliability that meets the highest standards.</p>
+                                    <p>ZenithCapital is your partner for Trading online through their premium online brokerage. As a provider for online trading and investment services they offer you reliability that meets the highest standards.</p>
                                     <div class="element-block">
                                         <a target="_blank" href="https://zenithcapital.cc/" class="btn link-btn btn-outline btn-rounded">Visit Site &#8702;</a></div>
                                 </div>
@@ -190,7 +190,7 @@
                         <aside class="col-xs-12 col-sm-4 col-md-3 rightSidebar">
                             <div class="latest_post_widget">
                                 <div class="title-holder">
-                                    <h3 class="title">Most Popular</h3>
+                                    <h3 class="title">Adverts</h3>
                                     <span class="title-shape title-shape-dark"></span>
                                 </div>
                                 <!--  /.End of title -->

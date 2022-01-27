@@ -8,7 +8,7 @@
 	<meta name="description" content="CryptoNewsUpdate24 is a cryptocurrency news service that covers latest bitcoin news today, technical analysis price for bitcoin and other altcoins">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'CryptoNewsUpdate24') }}</title>
+    <title>News | CryptoNewsUpdate24</title>
     <!-- Scripts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
    	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700%7CSource+Sans+Pro:200,300,400,500,600,700,900" rel="stylesheet">

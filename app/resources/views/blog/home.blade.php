@@ -69,8 +69,7 @@
                                 <a href="{{route('post.details', encrypt($post->id))}}" class="btn link-btn btn-outline btn-rounded">Reading &#8702;</a>
                                 <!-- /.Post button -->
                             </figcaption>
-                        </figure>
-                         
+                        </figure> 
                     </article>
                     @endforeach
                

@@ -80,11 +80,31 @@
                                         <a target="_blank" href="https://Crypto.com" class=" link-btn btn-outline btn-rounded">Visit Site &#8702;</a></div>
                                     </div>
                                 </div>
+                                 <div class="media latest_post">
+                                    <a class="media-left" href="#">
+                                        <img src="{{asset('assets/img/15.png')}}" class="media-object" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"><a href="#">BTC.com</a></h6>
+                                           <div class="element-block">
+                                        <a target="_blank" href="https://btc.com/" class=" link-btn  btn-rounded">Visit Site &#8702;</a></div>
+                                    </div>
+                                </div>
+                                 <div class="media latest_post">
+                                    <a class="media-left" href="#">
+                                        <img src="{{asset('assets/img/16.png')}}" class="media-object" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"><a href="#">Ripple.com</a></h6>
+                                           <div class="element-block">
+                                        <a target="_blank" href="https://Ripple.com/" class="link-btn  btn-rounded">Visit Site &#8702;</a></div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.End of subscribe -->
-                            <div class="banner-content">
+                            {{-- <div class="banner-content">
                                 <img src="{{asset('assets/img/370x300-1.jpg')}}" class="img-responsive center-block" alt="">
-                            </div>
+                            </div> --}}
                             <!-- /.End of banner content -->
                             <!-- /.End of category widget -->
                         </aside>
