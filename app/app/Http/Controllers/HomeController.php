@@ -28,9 +28,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        $data['posts'] = Post::latest()->take(10)->get();
+        $data['posts'] = Post::latest()->take(20)->get();
         $data['center'] = Post::latest()->take(3)->get();
-        $data['recent'] = Post::where('views', '>', 3)->take(5)->get();
+        $data['recent'] = Post::where('views', '>', 50)->take(10)->inRandomOrder()->get();
         $data['right'] = Post::take(2)->inRandomOrder()->get();
         $data['title'] = 'Crypto news today';
         return view('blog.home', $data);
