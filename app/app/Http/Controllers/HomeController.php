@@ -43,7 +43,7 @@ class HomeController extends Controller
         $data['similar'] = Post::where('category_id', $post->category->id)->take(5)->get();
         $data['title'] = 'News Details';
         $update = Post::where('id', $post->id)
-                    ->update(['views' => ($post->views + 7)]);
+                    ->update(['views' => ($post->views + 1)]);
         return view('blog.details', $data);
     }
 
