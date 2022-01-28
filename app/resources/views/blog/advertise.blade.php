@@ -19,8 +19,8 @@
                                     <div class="contact-address">
                                         <div class="contact-text">
                                             <h3>Contact Info</h3>
-                                            <p>Over the years, CryptoNews has established itself as a leading news resource in the cryptocurrency industry with a global reach. The platform boasts of captive readership from various sections of the industry and also a huge interest in advertising options among the cryptocurrency businesses. In addition to regular crypto-businesses and projects, the publication has also run campaigns to play a pivotal role in many successful ICOs and crowdsales.
-                                                To give a conservative glimpse of the publication’s readership, CryptoNews attracts over 1.5 million visitors monthly and 3 million sessions.</div>
+                                            <p>Over the years, CryptoNewsupdate24 has established itself as a leading news resource in the cryptocurrency industry with a global reach. The platform boasts of captive readership from various sections of the industry and also a huge interest in advertising options among the cryptocurrency businesses. In addition to regular crypto-businesses and projects, the publication has also run campaigns to play a pivotal role in many successful ICOs and crowdsales.
+                                                To give a conservative glimpse of the publication’s readership, CryptoNewsupdate24 attracts over 1.5 million visitors monthly and 3 million sessions.</div>
                                        
                                     </div>
 
@@ -28,8 +28,8 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="contact-form">
-                                    <p>Interested in advertising on CryptoNews? Just drop an email to advertise@CrytoNews.blog for more information and any additional clarification if required.
-                                    PLEASE BE AWARE THAT SCAMMERS ARE ACTIVE IN THIS SPACE. ALWAYS CONFIRM USING AN OFFICIAL COMPANY EMAIL ADDRESS (@cryptonews.blog ONLY) BEFORE SENDING PAYMENT
+                                    <p>Interested in advertising on CryptoNews? Just drop an email to advertise@CryptoNewsupdate24.com for more information and any additional clarification if required.
+                                    PLEASE BE AWARE THAT SCAMMERS ARE ACTIVE IN THIS SPACE. ALWAYS CONFIRM USING AN OFFICIAL COMPANY EMAIL ADDRESS (@CryptoNewsupdate24.com ONLY) BEFORE SENDING PAYMENT
                                     </p>
                                    <form action="{{route('advertiseMail')}}" metho="post">
                                     <div class="form-group row">
