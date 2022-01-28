@@ -61,7 +61,7 @@
                                 <div class="post-cat"><a href="{{route('post.details', encrypt($post->id))}}">{{$post->category->name}}</a></div>
                                 <div class="entry-meta">
                                     <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="{{$post->created_at->format('d, M Y')}}">{{$post->created_at->format('d, M Y')}}</time></span> 
-                                        <span class="comment-link"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>{{$post->views}}</a></span>
+                    
                                 
                                 </div>
                                 <h4 class="grid_post_title"><a href="{{route('post.details', encrypt($post->id))}}">{{$post->title}}</a></h4>
